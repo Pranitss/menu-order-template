@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Order System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        #menu, #cart {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #menu li, #cart li {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #menu li img {
+            float: left;
+            margin-right: 10px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        #menu li .item-details {
+            overflow: hidden;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .menu-item .item-details {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cafe Order System</h1>
+        
+        <div>
+            <h2>Menu</h2>
+            <ul id="menu">
+                <li class="menu-item">
+                    <img src="coffee.jpg" alt="Coffee">
+                    <div class="item-details">
+                        <h3>Coffee</h3>
+                        <p>$2.50</p>
+                    </div>
+                </li>
+                <!-- Add more menu items with similar structure -->
+            </ul>
+        </div>
+
+        <div>
+            <h2>Cart</h2>
+            <ul id="cart"></ul>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="cafe.js"></script>
+</body>
+</html>
